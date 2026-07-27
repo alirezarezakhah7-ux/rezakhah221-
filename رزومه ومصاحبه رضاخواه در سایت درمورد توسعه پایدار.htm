@@ -1,0 +1,817 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','182');
+	setStatVar('total_author','3');
+	setStatVar('modify_date','دوشنبه 1 فروردین 1390');
+	
+	setStatVar('today_view','107');
+	setStatVar('yesterday_view','119');
+	
+	setStatVar('this_month_view','2356');
+	setStatVar('last_month_view','2818');
+
+	setStatVar('total_view','102383');
+	setStatVar('last_view_date','دوشنبه 22 فروردین 1390 (15:25)');
+	
+
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[108]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=500px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script>
+		<title> علوم پزشكی و بهداشت حرفه ای     - سلامت نیروی کار ونقش آن در 
+توسعه علمی واقتصادی </title><meta http-equiv="Content-Type" 
+content="text/html; charset=UTF-8"><meta name="designer" content="Blog 
+Skin"><meta name="author" content="mostafa mirzaei"><meta 
+name="language" content="Farsi"><meta name="designerUrl" 
+content="http://www.blogskin.ir/"><meta name="description" content=" 
+علوم پزشكی و بهداشت حرفه ای     -  -  علوم پزشكی و بهداشت حرفه ای    "><meta
+ name="keywords" content=" علوم پزشكی و بهداشت حرفه ای    ,iranianHSE,, 
+Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin"></head><body><div 
+style="position: absolute; left: 0px; top: 0px; width: 122px; z-index: 
+9999; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 
+1px solid rgb(136, 136, 136); cursor: pointer;" id="mihan_page_advert">
+			<div style="direction: rtl; text-align: right; padding-right: 5px; 
+line-height: 18px; font-size: 11px; color: rgb(85, 85, 85);" 
+onclick="document.getElementById('mihan_page_advert').style.display='none'">
+				<img 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/advert_close.gif">
+ تبلیغات			</div>
+			<div style="width: 120px; height: 240px;">
+			<iframe 
+src="%D8%B1%D8%B2%D9%88%D9%85%D9%87%20%D9%88%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87%20%D8%AF%D8%B1%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%AF%D8%B1%D9%85%D9%88%D8%B1%D8%AF%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%20%D9%BE%D8%A7%DB%8C%D8%AF%D8%A7%D8%B1_files/showads.xhtml"
+ width="120px" frameborder="0" height="240px" scrolling="No"></iframe>		
+	</div>
+		</div>
+
+		<script>
+	setTodayDate = function(){
+		document.write('دوشنبه 22 فروردین 1390');
+		/*203667*/	}
+</script>	
+
+<link href="http://favicon.yandex.ru/favicon/www.hse.gov.uk" 
+rel="shortcut icon">
+
+
+
+
+
+
+<script src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/blog.js" language="javascript"></script>
+
+
+<link rel="alternate" type="application/rss+xml" title=" علوم پزشكی و 
+بهداشت حرفه ای    " href="http://iranianhse.mihanblog.com/post/rss/">
+<link rel="alternate" type="application/atom+xml" title=" علوم پزشكی و 
+بهداشت حرفه ای    " href="http://iranianhse.mihanblog.com/post/atom/">
+<link 
+href="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/style.css"
+ type="text/css" rel="stylesheet">
+<script src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/scroll.js" language="javascript"></script>
+<style>
+.top{background:url(http://blogskins.ir/45/top.jpg) no-repeat top right;height:168;width:100%}
+</style>
+<script language="javascript">
+function checkform(){	
+if (blogskin.name.value =='')	{alert('لطفا نام خود را وارد كنید');	return false;	}
+if (blogskin.adres.value =='')	{alert('لطفا آدرس پست الكترونیك خود را وارد كنید');	return false;	}
+if (blogskin.msg.value =='')	{alert('لطفا متن ارسالی خود را وارد كنید');	return false;	}
+return true;}
+</script>
+
+<div id="ali" align="center"><div style="width: 1003px;">
+<div class="blogskin-bg"><div class="blogskin-back">
+<div class="blogskin">
+
+<div class="top">
+<div class="top-blogskin"><div style="float: right; width: 780px;">
+<div style="padding-top: 15px;">
+<div class="topskin"></div>
+<a href="http://iranianhse.mihanblog.com/">صفحه اول</a>
+<a href="http://iranianhse.mihanblog.com/post/list">آرشیو مطالب</a>|
+<a href="http://hseonline.blogfa.com/" target="_blank">بهداشت حرفه ای 
+مهندس کریمی</a>|
+<a href="http://miadesabz.blogfa.com/" target="_blank">میعاد سبز</a>|
+<a href="http://www.cdc.gov/niosh/" target="_blank">NIOSH</a>
+</div>
+
+</div>
+<div class="tarikh"><br><br>امروز : <script language="javascript" src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/date.htm"></script>دوشنبه
+
+ 22 فروردين 1390</div>
+</div>
+
+<div class="titr"> علوم پزشكی و بهداشت حرفه ای    </div><div class="des">سلامتی
+
+ وزندگی درکار:حق اساسی هرانسان</div></div>
+
+<div class="top-link">
+<div class="top-blogskin2">
+<div style="float: right; width: 710px; direction: rtl; height: 20px;">
+<div style="padding: 3px 20px 0pt 0pt;">
+<a href="#postz">آخرین مطالب</a>
+<a href="#linkz">لینک دوستان</a>
+<a href="javascript:messageForm()" title="تماس با مدیران ">تماس با ما</a>
+</div></div>
+
+<form method="Get" action="http://google.com/search" class="sch"><input 
+name="sitesearch" value="iranianHSE.mihanblog.com" type="hidden">
+	<a href="http://iranianhse.mihanblog.com/post/rss/" title="RSS"><img 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/x.gif"
+ border="0" width="25" height="20"></a>&nbsp;&nbsp;
+	<input name="q" size="21" class="txt" type="text">&nbsp;&nbsp;<input 
+value=" " class="but" type="submit">
+</form>
+
+</div>
+</div>
+
+<div class="mainbg">
+
+<div class="mainr">
+
+<div class="menu"> 
+
+<div class="tmenu b5"><div class="tmenu2">معرفی سایت</div></div>
+<div class="xmenu">
+<div class="xmenu2">
+<div style="text-align: center;"><img 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/203667.jpg"></div>
+<br>
+<br></div>
+		</div>
+<div class="bmenu"></div>
+
+<div class="tmenu"><div class="tmenu2">موضوعات</div></div>
+<div class="xmenu">
+<div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/17">چك لیست (1)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/16">کمیت های هوا (2)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/15">حریق (2)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/14">ایمنی جرثقیل (1)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/13">ایمنی برق (1)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/12">منابع کنکور (1)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/11">حفاظت فردی (1)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/10">بهداشت (1)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/9">پوستر های ایمنی 
+(0)</a></div><div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/6">ارگونومی (6)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/5">عوامل شیمیایی (7)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/4">عوامل فیزیکی (6)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/3">وسایل نمونه 
+برداری و اندازه گیری (8)</a></div><div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/2">ایمنی (13)</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/category/1">کالیبراسیون (4)</a></div></div>
+<div class="bmenu"></div>
+<div class="tmenu b6"><div class="tmenu2">نویسندگان</div></div>
+<div class="xmenu">
+<div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/author/109121"></a> <a 
+href="http://iranianhse.mihanblog.com/post/author/109121">mostafa 
+mirzaei</a></div><div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/author/157739"></a> <a 
+href="http://iranianhse.mihanblog.com/post/author/157739">Reza Nikbazm</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/author/448260"></a> <a 
+href="http://iranianhse.mihanblog.com/post/author/448260">Ali karimi</a></div></div>
+<div class="bmenu"></div>
+<div class="tmenu"><div class="tmenu2">ابر برچسب ها</div></div>
+<div class="xmenu">
+<div class="xmenu2"><a 
+href="http://iranianhse.mihanblog.com/post/tag/%D8%AA%D8%BA%D8%B0%DB%8C%D9%87"
+ style="font-size: 1em;">
+		تغذیه</a> </div>
+</div>
+<div class="bmenu"></div>
+<div class="tmenu b9"><div class="tmenu2">آمار سایت</div></div>
+<div class="xmenu">
+<div class="xmenu2">
+			بازدیدهای امروز : <span class="a"><script>getStatVar('today_view');</script>107107</span>
+ نفر<br>
+بازدیدهای دیروز 
+			: <span class="a"><script>getStatVar('yesterday_view');</script>119119</span>
+ نفر<br>
+			كل بازدیدها : <span class="a"><script>getStatVar('total_view');</script>102383102383</span>
+ نفر<br>
+بازدید این ماه 
+			:<span class="a"> <script>getStatVar('this_month_view');</script>23562356</span>
+ نفر<br>
+بازدید ماه قبل 
+			: <span class="a"><script>getStatVar('last_month_view');</script>28182818</span>
+ نفر<br>
+تعداد نویسندگان 
+			: <span class="a"><script>getStatVar('total_author');</script>33</span>
+ عدد<br>
+كل مطالب ارسال شده: <span class="a"><script>getStatVar('total_post');</script>182182</span>
+ عدد<br>
+آخرین بازدید : <span class="a"><script>getStatVar('last_view_date');</script>دوشنبه
+ 22 فروردین 1390 (15:25)دوشنبه
+ 22 فروردین 1390 (15:25)</span><br>
+آخرین بروز رسانی : <span class="a"><script>getStatVar('modify_date');</script>دوشنبه
+ 1 فروردین 1390دوشنبه
+ 1 فروردین 1390</span>
+</div>
+</div>
+<div class="bmenu"></div>
+<div class="tmenu b2"><div class="tmenu2">امکانات جانبی</div></div>
+<div class="xmenu">
+<div class="xmenu2">
+<div id="c" style="text-align: center;">
+</div>
+</div>
+</div>
+<div class="bmenu"></div>
+
+
+</div>
+</div>
+
+<div class="mainl">
+
+<div class="post">
+
+<!--------------- block sabet ---------------------->
+<blogskin><div class="ad1"></div><div class="xpost"><div class="page22">
+
+<a href="http://hseonline.blogfa.com/?p=316" target="_blank">"&gt;<img 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/love-u-forever.gif"></a>
+
+</div></div><div class="ad3"><br></div></blogskin>
+<!--------------- block sabet ---------------------->
+
+		<div id="MihanblogShopAds" style="display: block; height: 0px; width: 
+100%; border: 0px none;"></div>
+		<div class="tpost"><div class="title"><a 
+href="http://iranianhse.mihanblog.com/post/108">سلامت نیروی کار ونقش آن 
+در توسعه علمی واقتصادی </a></div>
+<div class="tag"><div class="tagz">بازدید : <b><script src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/secure.htm"></script>20</b>
+ مرتبه</div><div class="tagz2">تاریخ : سه شنبه 19 آبان 1388</div></div></div>
+				
+<div class="xpost"><div class="hid"><div style="float: right;"></div> <div
+ id="InPost_MihanblogShopAds" style="display: block; height: 0px; width:
+ 100%; border: 0px none;"></div><img style="width: 347px; height: 
+287px;" 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/sazeman1.htm"
+ width="400" height="358"> <strong><font color="#1c5aa7">
+<p align="justify"><font color="#000000" face="Tahoma" size="2">گفتگو با
+ مهندس علیرضا رضاخواه</font></p>
+<p align="justify"><font face="Tahoma" size="2"><font color="#000000">&nbsp;موضوع:سلامت
+
+ نیروی كار و نقش آن در توسعه علمی و اقتصادی <br>اصولاً آنچه كه قادر است 
+تهدیدهای مدرن ناشی از توسعه یافتگی را كنترل و برنامه های توسعه ای را به 
+توسعه پایدار تبدیل نماید، مركزیت بخشیدن به سلامت انسان در كلیه بخش ها 
+می‌باشد. اصل اول منشور سازمان ملل متحد در اجلاس زمین در سال 1992 در 
+ریودوژانیرو برزیل اظهار می دارد: انسان محور توسعه است و شایسته یك زندگی 
+سالم مولد و سازگار با طبیعت. در حالیكه انسانها بنا به نوع شغل حرفه ای كه
+ انتخاب می كنند با برخی عوامل زیان آور در تماس هستند به گونه ای كه اگر 
+این عوامل از حد تحمل فیزیولوژیك بدن فزونی گیرند موجب آسیب‌های شغلی شده و
+ از بهره وری نیروی كار می كاهد بنابراین از آنجائی كه حفظ سلامت نیروی كار
+ محور توسعه پایدار محسوب می شود و حفاظت از تندرستی نیروی كار و بهسازی 
+محیط های كار با اجرای برنامه های بهداشت حرفه ای (كار) از اهمیت فراوانی 
+برخوردار است در همین راستا با آقای مهندس علیرضا رضاخواه مدیر بهداشت حرفه
+ ای معاونت بهداشتی دانشگاه علوم پزشكی اصفهان و كارشناس رسمی دادگستری در 
+رشته حوادث ناشی از كار به گفتگو نشسته ایم. <br>لطفاً خلاصه ای از سوابق 
+علمی و اجرایی و آموزشی خود را توضیح بدهید. <br>‌بنده در سال 58 بعد از 
+پیروزی شكوهمند انقلاب اسلامی پس از طی دوره مهندسی بهداشت محیط با عنوان 
+كارشناس مسئول بهداشت محیط به سرپرستی اداره بهداشت محیط یكی از شهرستانها 
+منصوب و سپس با حفظ سمت مدیریت شبكه بهداشت و درمان همان شهرستان را بعهده 
+داشتم و از سال 63 افتخار همكاری با هیئت علمی و آموزشی دانشكده های بهداشت
+ و شهید مهاجر و شهید فارسی و نیز دانشگاه آزاد خمینی شهر و چند مؤسسه 
+آموزشی دیگر را نیز داشته و مدت حدود ده سال این همكاری تداوم داشت مضافاً 
+اینكه از همان سال به واحد بهداشت حرفه ای مركز بهداشت استان منتقل و در 
+كنار امور اجرایی و بازرسی از محیط های كار و صتعت با مطبوعات علمی و فنی 
+همكاری تنگاتنگ داشته و تاكنون مقالات علمی كاربردی و تحقیقی اینجانب در 
+بیش از شصت شماره مجلات علمی و هفته نامه ها و ماهنامه ها و روزنامه های 
+كثیرالانتشار از جمله مجله علمی بهداشت جهان – ماهنامه علمی بهداشت حرفه ای
+ وزارت بهداشت و درمان و دانشكده بهداشت و مجله علمی فنی صنعت و ایمنی و 
+اقتصاد خانواده منتشر و در بیش از ده كنگره و سمینار كشوری و استانی مقالات
+ علمی و تحقیقی ارائه نموده و لوح تقدیر دریافت كرده ام مضافاً اینكه دوره 
+یكساله كارشناسی ارشد مدیریت آموزشی را گذرانده و تاكنون بیش از پانصد 
+برنامه آموزشی در صدا و سیمای مركز اصفهان برای كارگران و صنعتگران تهیه و 
+اجرا نموده و مفتخر به استفاده از بورس علمی آموزشی (W.H.O) سازمان بهداشت 
+جهانی شده و دوره علمی كاربردی ایمنی و بهداشت حرفه ای را در انستیتوی ملی 
+ایمنی و بهداشت حرفه ای (N.I.O.S.H) ایالت صنعتی احمدآباد هندوستان گذرانده
+ و در سالهای 91 و 1990 در دو كنگره جهانی بهداشت و ایمنی كار هامبورگ 
+آلمان و دهلی نو شركت نموده ام و هم اكنون نیز مقالات علمی كاربردی بنده در
+ سایت های اینترنتی از جمله گوگل و سایت مركز اسناد و مدارك علمی وزارت 
+علوم و تحقیقات و فن آوری قابل دسترسی و استفاده می باشد . <br>جنبه های 
+ضرورت حفظ سلامت نیروی كار را توضیح بدهید. <br>حفظ و صیانت نیروی كار از 
+دیدگاههای شرعی و اقتصادی و اجتماعی و قانونی و مدیریتی و بحث توسعه ملی و 
+بهره وری حائز اهمیت می باشد بطوری كه در موارد فوق الذكر بر حفظ شأن و 
+منزلت و حرمت نیروی كار و حفظ منابع انسانی و اولویت آن بر منابع مادی و 
+سرمایه‌ای تأكید گردیده زیرا از چهار عامل مؤثر در بهره وری یعنی انسان، 
+تكنولوژی، مواد و انرژی و سازمان ، عامل نیروی انسانی جایگاه ویژه ای دارد 
+بدلیل اینكه بهره وری سه عامل دیگر مشروط به سلامت جسمی و روانی فرد شاغل 
+(نیروی كار) خواهد بود. واضح و آشكار است كه اصلاح و بهسازی محیط های كار و
+ كنترل وتعدیل عوامل حادثه ساز و بیماریزا و كنترل سلامت كاركنان و توجه به
+ جنبه های روحی و روانی منابع انسانی موجب دقت در كار و تولید بیشتر و با 
+كیفیت و نهایتاً افزایش تولید ناخالص ملی (GNP) و ارتقاء بنیه و توان 
+اقتصادی كشور خواهد شد. <br><br>نقش مدیریت را در توسعه بهداشت حرفه ای و 
+ایمنی در صنایع بیان كنید. <br>نقش مدیر در اجرا و توسعه خدمات بهداشت حرفه
+ ای و ایمنی نقش كلیدی و محوری است یعنی نگرش دلسوزانه مدیران به منابع 
+اصلی خود یعنی نیروی كار راهگشای بسیاری از نابسامانی ها و شرایط نامناسب 
+محیط های كار می باشد. <br>به عبارت دیگر وقتی مدیر ارشد و كارفرمای یك 
+صنعت وكارخانه نسبت به حفظ سلامت نیروی كار بی توجه یا كم توجه باشد مسلماً
+ آموزش ایمنی و بهداشتی كاركنان و اعمال ضوابط و دستورالعمل های قانونی و 
+بازرسی‌های كارشناسان بهداشت حرفه ای كه طبق ماده 101 قانون كار ضابط 
+دادگستری هستند چندان موثر واقع نخواهد شد. <br><br>به نظر شما چگونه و با 
+چه شیوه ای می توان همكاری مدیران صنایع را در اجرای برنامه های بهداشت 
+حرفه ای و سلامت كار جلب نمود؟ <br>همانگونه كه قبلاً اشاره كردم باید با 
+یك برنامه ریزی مدون و اساسی اهمیت حفظ سلامت نیروی كار از دیدگاههای مختلف
+ اجتماعی و اقتصادی و شرعی و قانونی و مهمتر از آن از دیدگاه علم مدیریت 
+صنعتی و اصول توسعه و بهره وری برای مدیران صنایع تبیین و تشریح و قبل از 
+آموزش كاركنان و صنعتگران و كارگران آموزش مدیران موردتوجه قرار گیرد. به 
+بیان ساده تر اینكه با مدیران صنایع با الفبا و زبان و بینش خود آنها صحبت 
+كرد و نتایج بهبود شرایط محیط كار و نیروی كار سالم در افزایش تولید با 
+كیفیت و سوددهی بیشتر را برای كارفرما تبیین نمود. در این راستا واحد 
+بهداشت حرفه ای مركز بهداشت استان تصمیم دارد در سال جاری اولین سمینار نقش
+ مدیران ارشد صنایع در سلامت نیروی كار را با همكاری سه ارگان اداره كل كار
+ و امور اجتماعی و سازمان تامین اجتماعی در استان برگزار نماید. <br><br>شما
+
+ اشاره ای داشتید به اینكه مدیران باید به جنبه های شرعی حفظ سلامت نیروی 
+كار توجه داشته باشند و به منابع انسانی یعنی نیروی كار بیشتر توجه كنند 
+ممكن است مثالی بزنید. <br>منظور بنده این است كه یك مدیر یا كارفرما در 
+كشور اسلامی ما باید بپذیرد همانگونه كه شرع مقدس اسلام برای كار و تلاش و 
+كوشش و كسب روزی از راه حلال و مشروع اهمیت زیادی قائل است حفظ جان انسانها
+ را نیز واجب دانسته و حتی در رشته مدیریت صنعتی و نظریه مزلو نیاز به 
+ایمنی و مصون بودن از خطرات در دومین طبقه نیازهای انسان جای گرفته و 
+اولویت منابع انسانی بر منابع مادی و سرمایه ای تاكید شده ولی متاسفانه 
+اغلب در بازرسی و نظارت از واحدهای تولیدی و صنعتی و تماس های حضوری با 
+مدیران صنایع و كارفرمایان اینگونه استنباط می شود كه اغلب مدیران صنایع و 
+كارخانجات در انجام وظایف مدیریتی خود برای منابع مادی و سرمایه ای كارخانه
+ بیشتر از منابع انسانی اهمیت قائل می شوند! مثلا برای سرویس و نگهداری و 
+تعمیرات ماشین آلات خط تولید كه از جنس آهن و فولاد است برنامه و گراف زمان
+ بندی شده دارند تا مبادا ماشین آلات خط تولید دچار آسیب و نقص فنی شود ولی
+ همین مدیران صنعتی به معاینات سالیانه و مراقبت های بهداشتی كاركنان خود 
+یعنی سرویس و نگهداری منابع انسانی (نیروی كار) كه از جنس پوست و خون و 
+استخوان است و به مراتب آسیب پذیری بیشتری دارد توجه لازم را نمی نمایند!؟ <br><br>جایگاه
+
+ بهداشت حرفه ای (سلامت نیروی كار) در توسعه پایدار كشور را توضیح دهید. <br>در
+
+ پاسخ باید عرض كنم توسعه، حاصل اراده و كوشش و سعی و تلاش بخردانه و پیگیر
+ و مستمر نیروهای كار ملتی سالم و تواناست كه خواستار بهبود زندگی خود باشد
+ و هر ملتی باید راه توسعه كشور خود را بر اساس فرهنگ و تحقق بخشیدن 
+آرمانهای راستین ملت خود پیدا كند. اصولا سه عامل موثر در توسعه هر كشوری 
+عبارتند از : <br>الف ) تأمین نیازهای اساسی مردم و تعدیل و برابری اقتصادی
+ <br>ب ) تعادل اكولوژیك یعنی صنعت و تكنولوژی موجب تخریب محیط زیست نشود 
+(تعادل بین انسان و صنعت) <br>ج ) داشتن انرژی یعنی مواد اولیه و منابع 
+انسانی <br>لذا ملاحظه می كنید حفظ و صیانت نیروی انسانی و نیروی كار در 
+بحث توسعه هم جایگاه ویژه ای دارد. بدیهی است توسعه برای هیچ كشوری حاصل 
+نمی شود مگر اینكه به سلامت نیروی كار توجه خاص نماید و با بكارگیری 
+نیروهای كار مولد و مبتكر و خلاق صاحب فن آوری گردیده و تكنولوژی را در 
+كشور خود بومی نماید تا بتواند با استفاده از ذخایر منابع طبیعی و مواد 
+اولیه كشور خود توسعه پایدار داشته باشد در غیر اینصورت یعنی وقتی كشوری 
+فاقد نیروی كار سالم و خلاق و مبتكر و مولد باشد قدرت تغییر در تكنولوژی و 
+بومی كردن آن و فن آوری را نداشته و كشورش گورستان تكنولوژی وارداتی خواهد 
+شد و همواره وابسته و غیر خودكفا خواهد بود. <br><br>مهمترین مشكلات و 
+موانع سد راه بهداشت حرفه ای و سلامت نیروی كار در كشور و استان چیست و 
+برای ایجاد تحول و احیای جایگاه بهداشت حرفه ای در استان اصفهان كه 
+بزرگترین قطب صنعتی كشور است چه برنامه ای دارید؟ <br>ابتدا برای رفع 
+مشكلات اساسی حقوقی و قانونی سلامت نیروی كار در سطح كلان و جلوگیری از 
+انجام طرح ها و برنامه های موازی و نیز كاهش هزینه ها و نظارت و بازرسی 
+بیشتر و با كیفیت از واحدهای تولیدی و صنعتی باید به جای تفكیك بهداشت و 
+حفاظت كار از یكدیگر و شعار ایمنی مقدم بر كار، ایمنی و بهداشت حرفه ای را 
+قسمتی از كار دانست تا از كار قابل تفكیك نگردد. یعنی انجام هیچ كاری بدون 
+رعایت موازین بهداشت حرفه ای و ایمنی كار امكان پذیر نباشد كما اینكه 
+قانونگذاران و تهیه كنندگان مفاد فصل چهارم قانون كار برغم سعی و تلاش در 
+جداسازی بهداشت حرفه ای از حفاظت و ایمنی، قادر به تفكیك آن نشده بطوری كه 
+تناقضات موجود در فصل چهارم قانون كار از جمله تبصره دو ماده 92 و مواد 93 و
+ 105 و موادی دیگر گویای این ا دعای بنده است لذا ادغام سازمانها و ادارات 
+كل وزارت خانه هایی كه در جهت تامین سلامت نیروی كار فعالیت دارند از جمله 
+مركز سلامت محیط و كار وزارت كار و دفتر خدمات طب كار سازمان تامین اجتماعی
+ در یكدیگر و تشكیل سازمان مستقل با اختیارات قانونی كامل و اقتدار زیر نظر
+ نهاد ریاست جمهوری و یا یكی از وزارت های بهداشت و درمان یا كار و امور 
+اجتماعی برنامه های تامین سلامت نیروی كار را متمركز و منسجم و كارآمد و 
+موثرتر خواهد ساخت. <br>بطور خلاصه بعضی از برنامه های اجرایی مدیریت جدید 
+معاونت بهداشتی دانشگاه علوم پزشكی اصفهان و مسئول بهداشت حرفه ای اصفهان 
+به قرار زیر می باشد: <br>1- تشكیل كمیته ایمنی مواد شیمیایی در كار گروه 
+بهداشت و درمان و تامین اجتماعی (شورای بهداشت) استانداری در خصوص تهیه 
+بانك اطلاعاتی بیماریزایی و خطرات مواد شیمیایی و میزان مصرف و تولید و 
+مقابله با حوادث ‌شیمیایی و نیز ایجاد مركز فوریت های مسمومیت های شیمیایی.
+ <br>2- با توجه به اینكه مشاركت مدیران و كارفرمایان و دولت در تامین 
+سلامت نیروی كار یكی از محورهای اساسی توسعه پایدار است همكاری و تعامل 
+سازنده با مسئولین استانی دست اندركار كار و صنعت از جمله برگزاری اولین 
+سمینار مدیران ارشد و نقش آنها در حفظ سلامت نیروی كار و تبیین بهداشت حرفه
+ ای از دیدگاه مدیریت صنعتی. <br>3- برغم اینكه وظیفه سازمانی ما نیست ولی 
+به منظور تسهیل در نظارت و بازرسی بهتر و بیشتر از واحدهای تولیدی و صنعتی 
+فراهم كردن زمینه اشتغال برای فارغ التحصیلان بهداشت حرفه ای استان با 
+استناد به ماده 93 قانون كار و آئین نامه مربوطه و با جلب مشاركت مدیران از
+ برنامه های بنده است كه امیدوارم به یاری خداوند بتوانم در این برنامه 
+گامهای مثبتی بردارم. <br><br>4- ارتباط و تعامل با مسئولین ارشد كشوری 
+بویژه مسئولین محترم وزارت بهداشت و درمان و مكاتبات لازم و ارائه 
+پیشنهادات درخصوص ایجاد تعادل و تطابق در پذیرش دانشجوی بهداشت حرفه ای از 
+نظر جنسیت به طوری كه پذیرش دانشجوی پسر بیش از سه چهارم پذیرفته شدگان 
+دختر باشد بدلیل اینكه جنسیت اینگونه دانشجویان مانع بزرگ جذب آنها در 
+كمیته های بهداشت و حفاظت كار می گردد. <br><br>5- ایجاد مراكز بهداشت كار 
+در قطب های صنعتی (شهرك های صنعتی بزرگ) استان با همكاری اداره شهرك های 
+صنعتی و صنایع و معادن و هیئت امنا ء شهرك ها. <br><br>6- از بین بردن 
+تبعیض در ارائه خدمات شركت های خصوصی ارائه دهنده خدمات طب كار و بهداشت 
+حرفه ای با ارائه پیشنهادات درخصوص اصلاح آئین نامه مربوطه و نیز بكارگیری 
+پزشكان عمومی دوره دیده طب كار و كارشناسان بهداشت حرفه ای در كارخانجات و 
+مراكز صنعتی بزرگ و ایجاد مركز تخصصی طب كار در مركز استان . <br><br>7- 
+همكاری و تعامل با اداره كل صنایع و معادن استان و شهرك های صنعتی در خصوص 
+اینكه قبل از احداث هرگونه واحد تولیدی و صنعتی در مورد پروانه تاسیس و 
+بهره برداری آن از واحدهای بهداشت حرفه ای استعلام به عمل آید تا كارشناسان
+ بهداشت حرفه ای در بازرسی از واحدهای تولیدی و صنعتی با كار انجام شده و 
+عدم تفكیك كارگاهی و تسهیلات و تأسیسات بهداشتی احداث شده غیر ایمن و غیر 
+بهداشتی مواجه نگردند و بالاجبار كارفرما را به دلیل عدم رعایت ماده 156 
+قانون كار و یا نقض دیگر مواد قانونی به دادگاه ارجاع نمایند. <br><br>8- 
+جلب همكاری قضات دادگستری در اجرای مواد فصل چهارم قانون كار در خصوص 
+بهداشت و حفاظت كار <br><br>9- اجرای طرحهای كاربردی در خصوص آموزش كارگران
+ كارگاههای كوچك كه اكثریت كارگاهها و كارگران استان را تشكیل می دهند. <br><br>البته
+
+ مواردی كه اشاره شد كلیاتی بود از برنامه های بهداشت حرفه ای معاونت 
+بهداشتی دانشگاه علوم پزشكی اصفهان كه برای آشنایی بیشتر، خوانندگان گرامی 
+می توانند به برنامه تفصیلی سال 85 بهداشت حرفه ای استان اصفهان مراجعه 
+كنند. <br>نكته‌ای باقیمانده؟ <br>در پایان تاكید می كنم در دنیای كنونی با
+ توجه به سرعت زیاد تغییر تكنولوژی برای دستیابی به توسعه اقتصادی، ایران 
+اسلامی نیازمند انسانهای ماهر و خلاق و مبتكری است كه قدرت و توان ایجاد 
+تغییر در تكنولوژی و بومی كردن فن آوری مثل انرژی هسته ای را داشته باشند 
+لذا برای نیل به این منظور باید سلامت نیروی كار و توجه به ابعاد روحی و 
+روانی و شأن و منزلت آن بیش از پیش مورد تأكید قرار گیرد و با وضع مقررات 
+حقوقی و قانونی خاص و تلاش دست اندركاران از سلامت جسمی و روانی نیروهای 
+كار ماهر و خلاق و مبتكر، مراقبت های ویژه به عمل آید. <br></font></font></p><font
+ face="Tahoma" size="2"></font></font></strong>				<br><br><b></b>
+				<font style="font-size: 8pt;">									</font>
+
+</div></div>
+<div class="bpost">
+<div class="date"><div>ارسال توسط vahid cheraghi</div></div>
+<div class="nz"><a target="_self" href="javascript:newComment(108)"> 
+نظرات (<script>setCommentCnt(108)</script>00)</a></div></div>
+
+<div id="postz">
+<div class="tpost-x">آخرین مطالب</div>
+<div class="xpost"><div class="xpost2"><a 
+href="http://iranianhse.mihanblog.com/post/204">مزایای مصرف آجیل برای 
+سلامت قلب</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/203">ایمنی
+
+ سفر در جاده ها</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/202">حالات
+
+ شکست و تجزیه تحلیل اثرات آن (FMEA)</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/201">عید
+
+ نوروز بر همگان مبارک و فرخنده باد!</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/115">ارگونومی
+
+ در لپ تاپ</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/200"> 
+سیاه زخم</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/199">آلرژی
+
+ چشم در تابستان</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/198">گرما
+
+ زدگی چیست ؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/197">نکاتی
+
+ در رابطه با لوازم آرایشی و بهداشتی و چگونگی مصرف </a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/196">مشروبات
+
+ الكی و زیان های مربوط به آن </a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/195">تا
+
+ آخر عمر كمردرد نگیریم </a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/194">مدل
+
+ های ارزیابی ریسک در صنایع هوا فضا </a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/193">چرا
+
+ زیاد نوشیدن آب لاغر می‌کند؟!</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/192">OHSAS
+
+ 18001</a></div>
+<div class="xpost2"><a href="http://iranianhse.mihanblog.com/post/191">بررسی
+
+ تغییرات یکساله NIHL در اثر سرو صدا </a></div>
+</div><div class="bpost-x"></div></div>
+
+
+<script src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/code.js"></script><div
+ style="width: 100%; text-align: center; font-size: 8pt; color: rgb(181,
+ 50, 36); height: 25px;"><b><font size="1">.:</font></b>	<a 
+href="http://www.blogskin.ir/" target="_blank"><font color="#444444"> 
+Weblog Themes By <b>Blog Skin </b></font></a><b><font size="1">:.</font></b>
+</div></div></div><div class="mainr"><div class="menu">
+	
+<div class="tmenu b3"><div class="tmenu2">آرشیو مطالب</div></div>
+<div class="xmenu">
+<div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1390/1"> فروردین 1390</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1389/7"> مهر 1389</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1389/5"> مرداد 1389</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1389/4"> تیر 1389</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1389/3"> خرداد 1389</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1389/2"> اردیبهشت 
+1389</a></div><div class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1389/1"> فروردین 1389</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/12"> اسفند 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/11"> بهمن 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/10"> دی 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/9"> آذر 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/8"> آبان 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/7"> مهر 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/6"> شهریور 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/5"> مرداد 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/3"> خرداد 1388</a></div><div
+ class="xmenu1"><a 
+href="http://iranianhse.mihanblog.com/post/archive/1388/2"> اردیبهشت 
+1388</a></div></div>
+<div class="bmenu"></div>
+
+		<form id="frm-13025249434da2f40f412a5" method="post" 
+action="http://iranianhse.mihanblog.com/poll/new/fid/13025249434da2f40f412a5/atrty/1302524943/avrvy/0/key/d2ce1666841d02fe3ecfaca0a02b7efd/"
+ onsubmit="window.open('', 'poll', 
+'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')"
+ target="poll"><input name="data[pollid]" value="30508" 
+id="data[pollid]" type="hidden">		
+<div class="tmenu b7"><div class="tmenu2">نظر سنجی</div></div>
+<div class="xmenu">
+<div class="xmenu1">با نظرتان به ما در بهتر شدن وبلاگ کمک کنید<br><label><input
+ name="data[answer]" value="v1" type="radio">عالی </label><br><label><input
+ name="data[answer]" value="v2" type="radio">خوب</label><br><label><input
+ name="data[answer]" value="v3" type="radio">متوسط </label><br><label><input
+ name="data[answer]" value="v4" type="radio">ضعیف</label><br><label><input
+ name="data[answer]" value="v5" type="radio">خیلی ضعیف</label><br><br><input
+ value="ثبت" type="submit"></div>
+</div>
+<div class="bmenu"></div>
+		<input name="frm-id" value="13025249434da2f40f412a5" id="frm-id" 
+type="hidden"></form>
+
+
+<div class="tmenu b4"><div class="tmenu2">پیوند های روزانه</div></div>
+<div class="xmenu"><div class="xmenu1"><a target="_blank" 
+href="http://hseonline.blogfa.com/" title="">بهداشت حرفه ای مهندس کریمی</a></div><div
+ class="xmenu1"><a target="_blank" href="http://miadesabz.blogfa.com/" 
+title="">میعاد</a></div><div class="xmenu1"><a target="_blank" 
+href="http://tajrobenik24.mihanblog.com/" title="خاطرات رونیک دانشجوی 
+مشهدی">خاطرات</a></div><div class="xmenu1"><a target="_blank" 
+href="http://qms88.blogfa.com/" title="">دانشجویان پزشکی خروجی 95</a></div><div
+ class="xmenu1"><a target="_blank" href="http://silverskyyy.blogfa.com/"
+ title="">silversky</a></div><div class="xmenu1"><a target="_blank" 
+href="http://www.adsha.blogfa.com/" title="">انجمن دانشجویان اشتهارد</a></div><div
+ class="xmenu1"><a target="_blank" 
+href="http://www.hsezanjan.mihanblog.com/" title="">بهداشت حرفه ای زنجان</a></div><div
+ class="xmenu1"><a target="_blank" 
+href="http://mahshahr-hse.blogfa.com/" title="">بهداشت حرفه ای ماهشهر</a></div><div
+ class="xmenu1"><a target="_blank" 
+href="http://www.hse-rasht.blogfa.com/" title="">بهداشت حرفه ای شهرستان 
+رشت</a></div><div class="xmenu1"><a target="_blank" 
+href="http://www.ahmadvand.org/" title="اینجانب عبدالصمد احمدوند 
+کارشناس
+ ارشد مدیریت محیط زیست و کارشناس مهندسی ایمنی و بهداشت حرفه ای هستم . 
+علاوه بر داشتن مسئولیت و فعالیت های اجرایی در یك مجموعه بزرگ صنعتی ، به 
+تدریس موضوعات ایمنی ، بهداشت و محیط زیست (H.S.E) در برخی از دانشگاهها 
+نیز مشغول می باشم . همچنین ممیز سیستمهای مدیریت ISO14001  و OHSAS18001  
+هستم . هدفم از ایجاد این سایت  ، اشاعه و ارتقاء فرهنگ ایمنی ، بهداشت ، 
+محیط زیست می باشد. امیدوارم بتوانم با استعانت از پروردگار متعال  خدمتی 
+هرچند ناچیز به جامعه عظیم صنعتی بویژه سرمایه های اصلی صنایع که همانا 
+کارگران عزیز و زحمتکش می باشند ارائه نمایم.">سایت تخصصی H.S.E - احمدوند </a></div><div
+ class="xmenu1"><a target="_blank" 
+href="http://www.tehranoh.blogfa.com/" title="">بهداشت حرفه ای رسول 
+توكلی</a></div><div class="xmenu1"><a target="_blank" 
+href="http://occupational.blogfa.com/" title="">بهداشت حرفه ای هدایت 
+عباسی</a></div><div class="xmenu1"><a target="_blank" 
+href="http://phoenix125.blogfa.com/" title="">دانشکده آتش نشانی</a></div><div
+ class="xmenu1"><a target="_blank" 
+href="http://mahshahr-hse.blogfa.com/" title="">ایمنی و بهداشت ماهشهر</a></div><div
+ class="xmenu1"><a target="_blank" 
+href="http://www.jalali-hse.blogfa.com/" title="">بهداشت حرفه ای علیرضا 
+جلالی</a></div><div class="xmenu1"><a target="_blank" 
+href="http://www.setayeshgaran.ir/" title="">موسسه آسیب های اجتماعی 
+ستایشگران</a></div><div class="xmenu1"><a target="_blank" 
+href="http://safty2010.mihanblog.com/" title="">ایستگاه حوادث ،ایمنی 
+وبهداشت كار </a></div><div class="xmenu1"><a target="_blank" 
+href="http://www.gerashi.mihanblog.com/" title="">مرجع اصلی انواع فیلم و
+ کلیپ با حال و دبیدنی در ایران(آنلاین و مجانی)</a></div><div 
+class="xmenu1"><a target="_blank" href="http://http//www.rastgo.com" 
+title="">rastgo</a></div><div class="xmenu1"><a target="_blank" 
+href="http://hse-iranian.mihanblog.com/" title="">بهداشت حرفه ای آقای 
+مهدی زاذه</a></div><div class="xmenu1"><a href="http://www.blogskin.ir/"
+ target="_blank">قالب وبلاگ</a></div>
+<div class="xmenu1"><a href="http://iranianhse.mihanblog.com/linkdaily/"><b>همه
+
+ پیوندهای روزانه</b></a></div>
+<div class="xmenu1"><a href="javascript:linkdailyForm()"><b>ارسال پیوند 
+روزانه</b></a></div>
+</div>
+<div class="bmenu"></div>
+<!------------block ----------------------->
+<div class="tmenu b2"><div class="tmenu2">امکانات جانبی</div></div>
+<div class="xmenu"><div class="xmenu2">
+<center>
+blogskin
+</center>
+</div></div><div class="bmenu"></div>
+<!------------block ----------------------->
+
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+<div class="right">
+<div class="form">فرم تماس با ما</div>
+<div class="txt">
+<form method="POST" action="http://blogskins.ir/45/email.php" 
+name="blogskin" onsubmit="return checkform()" target="_blank">
+
+<input name="email" value="karimihse@yahoo.com" style="display: none;">
+
+<div>نام و نام خانوادگی: <input name="name" class="ii" 
+autocomplete="off"></div>
+<div>پست الكترونیك : <input name="adres" class="ii" autocomplete="off"></div>
+<div>	<textarea onfocus="javascript:;if (this.value =='در این قسمت متن 
+خود را بنویسید.'){ this.value = ''}" name="msg" class="ix">در این قسمت 
+متن خود را بنویسید.</textarea></div>
+<div><center><input 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/send.jpg"
+ type="image"></center></div>
+</form></div>
+</div>
+<div class="left" id="linkz">
+<div class="linkz">
+<div class="titrx">لینک دوستان</div>
+<div class="zz">
+<div><div><a href="http://iranianhse.mihanblog.com/link/"><b>آرشیو 
+پیوندها</b></a></div></div>
+<div><div><a target="_blank" href="http://hseonline.blogfa.com/" 
+title="">بهداشت حرفه ای مهندس کریمی</a></div></div><div><div><a 
+target="_blank" href="http://silverskyyy.blogfa.com/" title="">2t.farangi</a></div></div>
+</div>
+</div>
+<div class="rss"><br><a href="#ali" title="بالای صفحه"><img 
+src="%D8%B3%D8%A7%DB%8C%D8%AA%20hse%20%20%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87_files/x.gif"
+ border="0" width="70" height="60"></a></div>
+
+<div class="down"><div class="ft">
+تمام حقوق این وبلاگ و مطالب آن متعلق به 
+<a href="http://iranianhse.mihanblog.com/"> علوم پزشكی و بهداشت حرفه ای 
+   </a> می باشد.</div>
+</div></div>
+
+<script language="JavaScript">
+window.open("http://hseonline.blogfa.com/","","toolbar=no, width=1000,height=400,directories=no,menubar=no,scrollbars=no");
+</script> 
+
+
+</div>
+</div></div></div></div><div style="display: none;" id="seo">
+<h1><a href="http://www.sibdownload.com/" title="دانلود">دانلود</a></h1>
+
+<h1><a href="http://www.shadzist.com/" title="شادزیست">شادزیست</a></h1><h1><a
+ href="http://www.blogskin.ir/">قالب وبلاگ</a></h1>
+<h1><a href="http://www.limoonat.com/" title="لیمونات">لیمونات</a></h1>
+<h1><a href="http://www.blogi.ir/" title="تک باکس">تک باکس</a></h1><h1><a
+ href="http://www.sibdownload.com/" title="دانلود نرم افزار">دانلود نرم 
+افزار</a></h1></div>
+<script type="text/javascript">document.getElementById('s'+'e'+'o').style.display='none';</script>
+ <script>
+setTimeout(function () {
+		GetMihanBlogShowAds();
+	}, 1000);
+</script>
+<iframe 
+src="%D8%B1%D8%B2%D9%88%D9%85%D9%87%20%D9%88%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87%20%D8%B1%D8%B6%D8%A7%D8%AE%D9%88%D8%A7%D9%87%20%D8%AF%D8%B1%20%D8%B3%D8%A7%DB%8C%D8%AA%20%D8%AF%D8%B1%D9%85%D9%88%D8%B1%D8%AF%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%20%D9%BE%D8%A7%DB%8C%D8%AF%D8%A7%D8%B1_files/stat.xhtml"
+ style="width: 0px;" width="1" frameborder="0" height="1"></iframe>
+<script src="stat_data/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-153829-9";
+urchinTracker();
+</script></div></body></html>
